@@ -1,11 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Official website of Abdeen Ruthless. Athlete profile, team and achievements.">
+
 <title>ABDEEN RUTHLESS | Official Website</title>
+
+<meta name="description" content="Official website of Abdeen Ruthless. Discover his athletic journey, team, championships and achievements.">
 
 <style>
 * {
@@ -15,17 +16,24 @@
     font-family: Arial, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: #080808;
     color: white;
 }
 
 header {
-    padding: 22px 8%;
+    padding: 22px 7%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #292929;
+    flex-wrap: wrap;
+    gap: 15px;
+    border-bottom: 1px solid #333;
+    background: #080808;
 }
 
 .logo {
@@ -35,34 +43,44 @@ header {
     letter-spacing: 2px;
 }
 
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 20px;
     font-size: 14px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #d4af37;
 }
 
 .hero {
-    min-height: 600px;
+    min-height: 570px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 50px 20px;
-    background: linear-gradient(180deg,#171717,#080808);
+    padding: 60px 20px;
+    background: linear-gradient(135deg,#191919,#050505);
 }
 
 .hero h1 {
-    font-size: clamp(42px, 9vw, 85px);
     color: #d4af37;
+    font-size: clamp(45px,9vw,90px);
     font-weight: 900;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
 }
 
 .hero p {
     color: #ccc;
-    margin: 20px 0;
-    font-size: 17px;
+    margin: 20px 0 30px;
+    letter-spacing: 4px;
 }
 
 .btn {
@@ -73,24 +91,44 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: white;
 }
 
 section {
-    padding: 65px 8%;
+    padding: 75px 8%;
     text-align: center;
 }
 
 h2 {
     color: #d4af37;
     font-size: 32px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
+    letter-spacing: 2px;
 }
 
-.profile img, .team img {
+.profile img,
+.team img {
     width: 100%;
-    max-width: 420px;
+    max-width: 450px;
     border-radius: 12px;
     border: 2px solid #d4af37;
+    display: block;
+    margin: auto;
+}
+
+.description {
+    max-width: 650px;
+    margin: 25px auto 0;
+    color: #ccc;
+    line-height: 1.8;
+}
+
+.team-section {
+    background: #111;
 }
 
 .socials {
@@ -98,15 +136,15 @@ h2 {
     justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
-    margin-top: 25px;
 }
 
 .socials a {
     color: #d4af37;
     border: 1px solid #d4af37;
-    padding: 12px 20px;
+    padding: 14px 25px;
     border-radius: 5px;
     text-decoration: none;
+    transition: .3s;
 }
 
 .socials a:hover {
@@ -116,9 +154,25 @@ h2 {
 
 footer {
     text-align: center;
-    padding: 25px;
-    border-top: 1px solid #292929;
+    padding: 30px 15px;
+    border-top: 1px solid #333;
     color: #888;
+    line-height: 1.8;
+}
+
+@media(max-width:600px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    section {
+        padding: 55px 6%;
+    }
 }
 </style>
 </head>
@@ -127,13 +181,16 @@ footer {
 
 <header>
     <div class="logo">ABDEEN RUTHLESS</div>
+
     <nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#team">Team</a>
-        <a href="#social">Social</a>
+        <a href="#social">Social Media</a>
     </nav>
 </header>
+
+<main>
 
 <div class="hero" id="home">
     <div>
@@ -145,36 +202,62 @@ footer {
 
 <section id="about">
     <h2>ABOUT THE ATHLETE</h2>
+
     <div class="profile">
-        <img src="captain.jpg" alt="Abdeen Ruthless">
+        <img
+        src="IMG-20261115-WA0067.jpg"
+        alt="Abdeen Ruthless">
     </div>
-    <p style="margin-top:25px;color:#ccc;">
+
+    <p class="description">
         Welcome to the official website of Abdeen Ruthless.
-        Follow his athletic journey, team and achievements.
+        Discover his athletic journey, team, achievements
+        and upcoming championships.
     </p>
 </section>
 
-<section id="team" style="background:#111;">
+<section id="team" class="team-section">
     <h2>OFFICIAL TEAM</h2>
+
     <div class="team">
-        <img src="team.jpg" alt="Abdeen Ruthless Team">
+        <img
+        src="Screenshot_20261115_034827_WhatsApp.jpg"
+        alt="Abdeen Ruthless Team">
     </div>
-    <p style="margin-top:20px;color:#ccc;">
+
+    <p class="description">
         ONE TEAM. ONE MISSION.
     </p>
 </section>
 
 <section id="social">
     <h2>FOLLOW ABDEEN</h2>
+
     <div class="socials">
-        <a href="https://www.instagram.com/mahmoud.ruthless.abdeen/" target="_blank">Instagram</a>
-        <a href="https://www.facebook.com/share/18iXmPmcVY/" target="_blank">Facebook</a>
-        <a href="https://www.tiktok.com/@abdeen77kg" target="_blank">TikTok</a>
+
+        <a href="https://www.instagram.com/mahmoud.ruthless.abdeen/"
+        target="_blank" rel="noopener">
+        INSTAGRAM
+        </a>
+
+        <a href="https://www.facebook.com/share/18iXmPmcVY/"
+        target="_blank" rel="noopener">
+        FACEBOOK
+        </a>
+
+        <a href="https://www.tiktok.com/@abdeen77kg"
+        target="_blank" rel="noopener">
+        TIKTOK
+        </a>
+
     </div>
 </section>
 
+</main>
+
 <footer>
-    © 2026 ABDEEN RUTHLESS | ALL RIGHTS RESERVED
+    © 2026 ABDEEN RUTHLESS<br>
+    OFFICIAL WEBSITE | ALL RIGHTS RESERVED
 </footer>
 
 </body>
