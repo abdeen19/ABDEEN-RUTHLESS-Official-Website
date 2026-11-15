@@ -1,178 +1,105 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="description" content="Official website of Abdeen Ruthless - MMA Fighter.">
+<meta name="theme-color" content="#080808">
 <title>ABDEEN RUTHLESS | Official Website</title>
 
-<meta name="description" content="Official website of Abdeen Ruthless. Discover his athletic journey, team, championships and achievements.">
-
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:#080808;color:#fff;
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.6
 }
-
-html {
-    scroll-behavior: smooth;
+:root{--gold:#d4af37;--dark:#111}
+a{color:inherit;text-decoration:none}
+header{
+  position:sticky;top:0;z-index:10;
+  background:#080808ed;border-bottom:1px solid #332a12;
+  padding:18px 7%;display:flex;
+  justify-content:space-between;align-items:center;flex-wrap:wrap
 }
-
-body {
-    background: #080808;
-    color: white;
+.logo{font-size:23px;font-weight:900;color:var(--gold)}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+nav a{font-size:13px;color:#ddd}
+nav a:hover{color:var(--gold)}
+.hero{
+  min-height:620px;display:flex;align-items:center;
+  justify-content:center;text-align:center;padding:65px 20px;
+  background:linear-gradient(#0009,#000e),url("IMG-20261115-WA0067.jpg") center 30%/cover;
 }
-
-header {
-    padding: 22px 7%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    border-bottom: 1px solid #333;
-    background: #080808;
+.hero-content{max-width:750px}
+.hero h1{font-size:clamp(45px,9vw,85px);line-height:1.1;color:var(--gold)}
+.hero p{font-size:19px;letter-spacing:5px;margin:18px 0}
+.btn{
+  display:inline-block;background:var(--gold);color:#080808;
+  padding:13px 27px;font-weight:bold;border-radius:3px;margin-top:15px
 }
-
-.logo {
-    color: #d4af37;
-    font-size: 23px;
-    font-weight: 900;
-    letter-spacing: 2px;
+section{padding:75px 7%}
+.section-title{
+  text-align:center;color:var(--gold);
+  font-size:34px;margin-bottom:35px
 }
-
-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
+.about{max-width:850px;margin:auto;text-align:center;color:#ccc}
+.stats{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:15px;margin-top:35px
 }
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    transition: .3s;
+.stat{
+  background:#151515;border:1px solid #493b17;
+  padding:25px 10px;text-align:center;border-radius:7px
 }
-
-nav a:hover {
-    color: #d4af37;
+.stat strong{display:block;color:var(--gold);font-size:35px}
+.stat span{font-size:13px;color:#bbb}
+.fights{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px
 }
-
-.hero {
-    min-height: 570px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(135deg,#191919,#050505);
+.fight{
+  background:#151515;border:1px solid #403315;
+  border-radius:8px;padding:22px
 }
-
-.hero h1 {
-    color: #d4af37;
-    font-size: clamp(45px,9vw,90px);
-    font-weight: 900;
-    letter-spacing: 5px;
+.fight h3{color:var(--gold);font-size:21px;margin-bottom:10px}
+.fight p{font-size:14px;color:#ccc;margin:5px 0}
+.fight a{display:inline-block;color:var(--gold);margin-top:13px;font-weight:bold}
+.tag{
+  display:inline-block;background:#4a3a12;color:#f4d46a;
+  padding:4px 10px;border-radius:3px;font-size:11px;margin-bottom:10px
 }
-
-.hero p {
-    color: #ccc;
-    margin: 20px 0 30px;
-    letter-spacing: 4px;
+.team{text-align:center}
+.team img{
+  width:min(100%,600px);height:auto;max-height:420px;
+  object-fit:contain;border:2px solid var(--gold);border-radius:8px
 }
-
-.btn {
-    display: inline-block;
-    background: #d4af37;
-    color: black;
-    padding: 14px 30px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: .3s;
+.social-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:15px;max-width:850px;margin:auto
 }
-
-.btn:hover {
-    background: white;
+.social{
+  display:block;text-align:center;padding:20px;
+  background:#151515;border:1px solid #493b17;
+  border-radius:7px;transition:.2s
 }
-
-section {
-    padding: 75px 8%;
-    text-align: center;
+.social:hover{background:#29210e;border-color:var(--gold)}
+.social strong{display:block;color:var(--gold);font-size:18px}
+.social span{font-size:12px;color:#bbb}
+.subheading{
+  color:var(--gold);text-align:center;
+  font-size:21px;margin:35px 0 18px
 }
-
-h2 {
-    color: #d4af37;
-    font-size: 32px;
-    margin-bottom: 35px;
-    letter-spacing: 2px;
+footer{
+  border-top:1px solid #493b17;text-align:center;
+  padding:25px;color:#888;font-size:13px
 }
-
-.profile img,
-.team img {
-    width: 100%;
-    max-width: 450px;
-    border-radius: 12px;
-    border: 2px solid #d4af37;
-    display: block;
-    margin: auto;
-}
-
-.description {
-    max-width: 650px;
-    margin: 25px auto 0;
-    color: #ccc;
-    line-height: 1.8;
-}
-
-.team-section {
-    background: #111;
-}
-
-.socials {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.socials a {
-    color: #d4af37;
-    border: 1px solid #d4af37;
-    padding: 14px 25px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: .3s;
-}
-
-.socials a:hover {
-    background: #d4af37;
-    color: black;
-}
-
-footer {
-    text-align: center;
-    padding: 30px 15px;
-    border-top: 1px solid #333;
-    color: #888;
-    line-height: 1.8;
-}
-
-@media(max-width:600px) {
-    header {
-        justify-content: center;
-        text-align: center;
-    }
-
-    nav {
-        justify-content: center;
-    }
-
-    section {
-        padding: 55px 6%;
-    }
+@media(max-width:600px){
+  header{justify-content:center;gap:12px}
+  nav{justify-content:center}
+  section{padding:55px 5%}
 }
 </style>
 </head>
@@ -180,86 +107,175 @@ footer {
 <body>
 
 <header>
-    <div class="logo">ABDEEN RUTHLESS</div>
-
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#team">Team</a>
-        <a href="#social">Social Media</a>
-    </nav>
+  <div class="logo">ABDEEN RUTHLESS</div>
+  <nav>
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT</a>
+    <a href="#record">RECORD</a>
+    <a href="#fights">FIGHTS</a>
+    <a href="#team">TEAM</a>
+    <a href="#social">SOCIAL</a>
+  </nav>
 </header>
 
-<main>
-
-<div class="hero" id="home">
-    <div>
-        <h1>ABDEEN<br>RUTHLESS</h1>
-        <p>OFFICIAL ATHLETE WEBSITE</p>
-        <a href="#about" class="btn">DISCOVER MORE</a>
-    </div>
-</div>
-
-<section id="about">
-    <h2>ABOUT THE ATHLETE</h2>
-
-    <div class="profile">
-        <img
-        src="IMG-20261115-WA0067.jpg"
-        alt="Abdeen Ruthless">
-    </div>
-
-    <p class="description">
-        Welcome to the official website of Abdeen Ruthless.
-        Discover his athletic journey, team, achievements
-        and upcoming championships.
-    </p>
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p>BORN TO COMPETE</p>
+    <h1>ABDEEN<br>RUTHLESS</h1>
+    <p>MMA FIGHTER | 77 KG</p>
+    <a class="btn" href="#fights">EXPLORE FIGHT HISTORY</a>
+  </div>
 </section>
 
-<section id="team" class="team-section">
-    <h2>OFFICIAL TEAM</h2>
-
-    <div class="team">
-        <img
-        src="Screenshot_20261115_034827_WhatsApp.jpg"
-        alt="Abdeen Ruthless Team">
-    </div>
-
-    <p class="description">
-        ONE TEAM. ONE MISSION.
+<section id="about">
+  <h2 class="section-title">ABOUT THE FIGHTER</h2>
+  <div class="about">
+    <p>
+      Welcome to the official website of Abdeen Ruthless.
+      Follow the fighter's journey, achievements, fight history
+      and official team.
     </p>
+    <div class="stats">
+      <div class="stat"><strong>7</strong><span>WINS</span></div>
+      <div class="stat"><strong>2</strong><span>LOSSES</span></div>
+      <div class="stat"><strong>77</strong><span>WEIGHT KG</span></div>
+      <div class="stat"><strong>7-2</strong><span>FIGHT RECORD</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="record">
+  <h2 class="section-title">FIGHT RECORD</h2>
+  <div class="about">
+    <h3 style="font-size:42px;color:#d4af37">7 - 2</h3>
+    <p>7 Wins | 2 Losses</p>
+    <p>Official fight record</p>
+  </div>
+</section>
+
+<section id="fights">
+  <h2 class="section-title">FIGHT HISTORY</h2>
+  <div class="fights">
+
+    <article class="fight">
+      <span class="tag">WIN</span>
+      <h3>Fight 01</h3>
+      <p>Organization: AUFC</p>
+      <p>Year: 2019</p>
+      <p>Result: TKO</p>
+      <p>Round: 1</p>
+      <p>Weight: 77 KG</p>
+      <a href="https://youtu.be/0EYk64vHDxk" target="_blank" rel="noopener">WATCH FIGHT ↗</a>
+    </article>
+
+    <article class="fight">
+      <span class="tag">WIN</span>
+      <h3>Fight 02</h3>
+      <p>Organization: MFC</p>
+      <p>Year: 2022</p>
+      <p>Result: Arm Triangle</p>
+      <p>Round: 3</p>
+      <p>Weight: 77 KG</p>
+      <a href="https://youtu.be/ThUrLYSA0VA" target="_blank" rel="noopener">WATCH FIGHT ↗</a>
+    </article>
+
+    <article class="fight">
+      <span class="tag">WIN</span>
+      <h3>Fight 03</h3>
+      <p>Organization: AUFC</p>
+      <p>Year: 2023</p>
+      <p>Result: Rear Naked</p>
+      <p>Round: 1</p>
+      <p>Weight: 77 KG</p>
+      <a href="https://youtu.be/NJ7JmQ_427E" target="_blank" rel="noopener">WATCH FIGHT ↗</a>
+    </article>
+
+    <article class="fight">
+      <span class="tag">WIN</span>
+      <h3>Fight 04</h3>
+      <p>Organization: Nightmare</p>
+      <p>Year: 2024</p>
+      <p>Result: Judges' Decision</p>
+      <p>Round: 3</p>
+      <p>Weight: 77 KG</p>
+      <a href="https://youtu.be/_b_HR1xZQ7g" target="_blank" rel="noopener">WATCH FIGHT ↗</a>
+    </article>
+
+    <article class="fight">
+      <span class="tag">WIN</span>
+      <h3>Fight 05</h3>
+      <span class="tag">TITLE FIGHT</span>
+      <p>Organization: OFC</p>
+      <p>Year: 2025</p>
+      <p>Result: Arm Triangle</p>
+      <p>Round: 1</p>
+      <p>Weight: 77 KG</p>
+      <a href="https://youtu.be/jjAeS3vqMJA" target="_blank" rel="noopener">WATCH FIGHT ↗</a>
+    </article>
+
+    <article class="fight">
+      <span class="tag">WIN</span>
+      <h3>Fight 06</h3>
+      <p>Organization: SFC</p>
+      <p>Year: 2025</p>
+      <p>Result: Disqualification</p>
+      <p>Round: 3</p>
+      <p>Weight: 77 KG</p>
+      <a href="https://youtu.be/1L1UXWkLeBE" target="_blank" rel="noopener">WATCH FIGHT ↗</a>
+    </article>
+
+    <article class="fight">
+      <span class="tag">WIN</span>
+      <h3>Fight 07</h3>
+      <p>Championship: Republic Championship</p>
+      <p>Year: 2026</p>
+      <p>Result: Win</p>
+      <p>Round: 1</p>
+      <p>Weight: 77 KG</p>
+      <a href="https://vt.tiktok.com/ZSpb7Kuwe/" target="_blank" rel="noopener">WATCH FIGHT ↗</a>
+    </article>
+
+  </div>
+</section>
+
+<section id="team" class="team">
+  <h2 class="section-title">OFFICIAL TEAM</h2>
+  <img src="Screenshot_20261115_034827_WhatsApp.jpg"
+       alt="Abdeen Ruthless Official Team">
+  <h3 style="color:#d4af37;margin-top:18px">ELITE MMA TEAM</h3>
 </section>
 
 <section id="social">
-    <h2>FOLLOW ABDEEN</h2>
+  <h2 class="section-title">OFFICIAL SOCIAL MEDIA</h2>
 
-    <div class="socials">
+  <h3 class="subheading">ABDEEN'S SOCIAL MEDIA</h3>
+  <div class="social-grid">
+    <a class="social" href="https://www.instagram.com/mahmoud.ruthless.abdeen/" target="_blank" rel="noopener">
+      <strong>INSTAGRAM</strong><span>Official Fighter Account</span>
+    </a>
+    <a class="social" href="https://www.facebook.com/share/18iXmPmcVY/" target="_blank" rel="noopener">
+      <strong>FACEBOOK</strong><span>Official Fighter Account</span>
+    </a>
+    <a class="social" href="https://www.tiktok.com/@abdeen77kg" target="_blank" rel="noopener">
+      <strong>TIKTOK</strong><span>Official Fighter Account</span>
+    </a>
+  </div>
 
-        <a href="https://www.instagram.com/mahmoud.ruthless.abdeen/"
-        target="_blank" rel="noopener">
-        INSTAGRAM
-        </a>
-
-        <a href="https://www.facebook.com/share/18iXmPmcVY/"
-        target="_blank" rel="noopener">
-        FACEBOOK
-        </a>
-
-        <a href="https://www.tiktok.com/@abdeen77kg"
-        target="_blank" rel="noopener">
-        TIKTOK
-        </a>
-
-    </div>
+  <h3 class="subheading">ELITE MMA TEAM SOCIAL MEDIA</h3>
+  <div class="social-grid">
+    <a class="social" href="https://www.tiktok.com/@elite.team601" target="_blank" rel="noopener">
+      <strong>TIKTOK</strong><span>Official Team Account</span>
+    </a>
+    <a class="social" href="https://www.instagram.com/elite.mma.team/" target="_blank" rel="noopener">
+      <strong>INSTAGRAM</strong><span>Official Team Account</span>
+    </a>
+  </div>
 </section>
 
-</main>
-
 <footer>
-    © 2026 ABDEEN RUTHLESS<br>
-    OFFICIAL WEBSITE | ALL RIGHTS RESERVED
+  <p>© 2026 ABDEEN RUTHLESS. ALL RIGHTS RESERVED.</p>
+  <p>BORN TO COMPETE.</p>
 </footer>
 
 </body>
 </html>
-
